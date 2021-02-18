@@ -1,0 +1,161 @@
+/* Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Common */
+
+.flex {
+  display: flex;
+}
+
+.block {
+  display: block;
+}
+
+.flex.center {
+  justify-content: center;
+  align-items: center;
+}
+
+.bcenter {
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+}
+
+.tac {
+  text-align: center;
+}
+
+section {
+  min-height: calc(100vh - 256px);
+  padding: 128px 0px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  width: 300px;
+  font-weight: 700;
+  font-size: 16pt;
+  padding: 10px;
+  border-radius: 100px;
+  border: solid 4px #cbc18d;
+  color: #fff;
+}
+
+.mini-message {
+  text-align: center;
+  font-size: 16pt;
+  font-family: 'Noto Serif JP', serif;
+}
+
+h2 {
+  text-align: center;
+  font-size: 28pt;
+  font-family: 'Noto Serif JP', serif;
+  margin-bottom: 32px;
+}
+
+/* Color */
+
+.bg-darkblue {
+  background-image: url(/img/darkbluebg.jpg);
+  background-repeat: repeat;
+  background-position: 50% 50%;
+  background-size: 150px;
+}
+
+.bg-white {
+  background: linear-gradient(0deg, rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url(/img/whitebg.png);
+  background-repeat: repeat;
+  background-position: 50% 50%;
+  background-size: 150px;
+}
+
+.fg-white {
+  color: #fff;
+}
+
+.btn-blue {
+  background-color: #1c1466;
+}
+
+.fg-navy {
+  color: #182c59;
+}
+
+/* Header */
+
+header nav {
+  height: 72px;
+}
+
+header .main-visual {
+  height: calc(100vh - 72px);
+  background-image: url(/img/main-visual.png);
+  background-size: cover;
+  background-position: center;
+}
+
+/* Story */
+
+section.story p {
+  font-size: 32pt;
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 700;
+  filter: drop-shadow(0px 0px 5px #000);
+  line-height: 1.6em;
+}
+
+section.story.world {
+  
+}
+section.story.magic {
+  
+}
+section.story.school {
+  
+}
+
+/* Product */
+
+section.product p {
+  font-size: 28pt;
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 700;
+}
+
+section.product img {
+  width: 50vw;
+  height: 50vh;
+  margin: 70px 0px;
+  object-fit: contain;
+}
+
+/* Features */
+
+section.features .card > img {
+  width: 300px;
+  margin: 16px 32px;
+}
+
+section.features .card > p {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+section.features .card:not(:first-child):before {
+  content: "";
+  background: #aaa;
+  display: block;
+  position: absolute;
+  margin-top: 128px;
+  height: 170px;
+  width: 1px;
+}
