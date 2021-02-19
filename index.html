@@ -5,7 +5,43 @@
   <title>テクノロジア魔法学校</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;500&display=swap" rel="stylesheet">
+
+  <script src="//code.jquery.com/jquery-3.5.1.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
   <link rel="stylesheet" href="/index.css">
+
+  <script>
+    $(document).ready(function() {
+      $('.carousel').slick({
+        centerMode: true,
+        centerPadding: '400px',
+        slidesToShow: 1,
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: '40px',
+              slidesToShow: 3
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: '40px',
+              slidesToShow: 1
+            }
+          }
+        ]
+      });
+    });
+  </script>
 </head>
 
 <body>
@@ -28,7 +64,7 @@
     <p class="fg-white">そう、テクノロジアには、<br>
       魔法を教える学校があったのです。</p>
   </section>
-  
+
   <section class="product bg-darkblue tac">
     <p class="fg-white tac">テクノロジアの世界で<br>プログラミングの魔法を学ぼう！</p>
     <img src="/img/product.png" alt="">
@@ -53,5 +89,121 @@
       </div>
     </div>
   </section>
+
+  <section class="learn bg-blue">
+    <p class="mini-message">＼一つだけじゃない！／</p>
+    <h2>テクノロジア魔法学校で学べること</h2>
+
+    <div class="curriculum flex center">
+      <img src="/img/curriculum.png" alt="">
+      <div>
+        <p class="fg-white">
+          テクノロジア魔法学校では、Webデザイン、ゲーム、メディアアートの3つを学ぶ事ができます。これらの開発には、<strong>初心者でも扱いやすい</strong>HTML/CSSやJavaScript、Processing、Shaderを採用しました。</p>
+        <br>
+        <p class="fg-white">単一の技術だけでなく、複数の言語を横断して学ぶ<strong>「クロスカテゴリー学習」</strong>を採用することで、より実用的な技術を身につける事ができます。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="look bg-white">
+    <p class="mini-message">＼どんな感じなの？／</p>
+    <h2>テクノロジア魔法学校の世界を覗いてみよう</h2>
+
+    <div class="carousel">
+      <div class="carousel-content">
+        <img src="/img/webd.png" alt="">
+        <h3 class="webd">WEB DESIGN</h3>
+        <p>ディズニーキャラクターをあしらったWebページをデザインしながら、HTML5とCSS3というWeb制作用言語を基礎から学んでいきます。JavaScriptを使用したワンランク上のWebデザインレッスンも。ふだん目にするWebサイトがどのようにできているのかも分かるようになるので、参考にしたり応用したりできるようにもなります。</p>
+      </div>
+      <div class="carousel-content">
+        <img src="/img/game.png" alt="">
+        <h3 class="game">GAME</h3>
+        <p>rocessingやJavaScriptという言語を使って、アクションゲーム、レースゲームからパズルゲームまで、さまざまなジャンルのゲーム制作を学びます。プログラミング基礎、アルゴリズム基礎はもちろん、数学や物理の有用性も体験的に楽しく理解することができます。ゲームを遊ぶ側でなく「つくる側」の世界がひらけるでしょう。</p>
+      </div>
+      <div class="carousel-content">
+        <img src="/img/ma.png" alt="">
+        <h3 class="ma">MEDIA ART</h3>
+        <p>プログラミングとアルゴリズムでCGを生成し、動くアート作品をつくります。主にProcessingという言語を使いますが、初心者でも驚くほど豊かな表現を生み出すことができるので、達成感もひとしおです。後半ではShaderというグラフィックス処理に強い言語を使ってより高度な映像表現をつくることにも挑戦します。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="voice bg-darkblue">
+    <h2 class="pen">お客様の声</h2>
+    <div class="letter-box">
+      <div class="letter bcenter">
+        <div class="letter-header clearfix">
+          <img src="/img/voice1.png" alt="">
+          <h3>思い通りのWEBサイトが作れるように！</h3>
+          <p>20代女性 映像編集者</p>
+        </div>
+        <hr>
+        <p>プログラミング未経験だったのですが、会社のWEBサイトの更新を担当することになり、
+          勉強のためにテクノロジア魔法学校を購入しました。<br>
+          HTMLとCSSを初歩から学ぶことができ、WEBサイトの文言を修正するだけでなく、
+          自分でデザインを考え、コードを書いてかっこいいページを作成するスキルが身につきました。
+          上司や同僚から「こういうの作れる？」とリクエストされても、
+          期待を超えるような表現力のあるWEBサイトが作れそうです！</p>
+      </div>
+      <div class="letter bcenter">
+        <div class="letter-header clearfix">
+          <img src="/img/voice2.png" alt="">
+          <h3>忙しい毎日でも自分のペースで学べる</h3>
+          <p>20代男性 教育機関勤務</p>
+        </div>
+        <hr>
+        <p>毎日仕事が忙しいので、決まった時間に決まった場所で学ぶプログラミングスクールは
+          どうしても前向きになれませんでした。
+          かといって、本を買って勉強しても一度分からなくなると挫折してしまって...。
+          テクノロジアは”学ぶ→入力する→リアルタイムに結果が見える”
+          というステップを繰り返していくので、分からなくてモヤモヤすることもなく
+          スキルを身につけることができました。<br>
+          これからは、一度挫折したPythonにもチャレンジして業務の効率化や
+          スキルアップを目指したいです。</p>
+      </div>
+      <div class="letter bcenter">
+        <div class="letter-header clearfix">
+          <img src="/img/voice3.png" alt="">
+          <h3>子どもの小学校でのプログラミング必修化対策に</h3>
+          <p>30代女性（お母さま） 教育機関勤務</p>
+        </div>
+        <hr>
+        <p>小中高でのプログラミング必修化が迫るなか、自分ではプログラミングはできない
+          のですが、子どもには触れる機会をつくってあげたいと思って購入しました。<br>
+          テクノロジア魔法学校はプログラミング入門に最適で、
+          作品が出来たときの成功体験がよいですね。
+          ディズニーのポストカードが届くのも楽しんでいます。<br>
+          親の付き添いなしで、子どもが自主的に学習している姿をみれるのは嬉しいです。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="purchase bg-white">
+    <p class="mini-message">＼今なら体験入学でクーポンもらえる！／</p>
+    <h2>テクノロジア魔法学校のご購入はこちら</h2>
+    <div class="flex center">
+      <img src="/img/purchase.png" alt="">
+      <div class="product-info">
+        <p class="item-name">テクノロジア魔法学校</p>
+        <p class="item-description">入門・基礎編 全76レッスン</p>
+        <div class="price">[一括払い]<span>49,800</span>円（税別）</div>
+        <div class="price">[分割払い]<span>4,943</span>円（税込）</div>
+      </div>
+    </div>
+    <a href="" class="btn btn-blue block bcenter bubble tac">体験入学はこちら！</a>
+    <a href="" class="btn btn-red block bcenter tac">購入ページへ</a>
+  </section>
   
+  <footer class="bg-simple-blue">
+    <img src="/img/lifeistech_logo_white.png" alt="">
+    <ul class="footer-menu clearfix">
+      <li class="item">個人情報保護方針</li>
+      <li class="item">個人情報の取扱いについて</li>
+      <li class="item">利用規約</li>
+      <li class="item">特定商取引法に関する表示</li>
+    </ul>
+    <p class="copylight">&copy; Disney Developed by Life is Tech, Inc.</p>
+  </footer>
+
 </body></html>

@@ -3,6 +3,7 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
 /* Common */
@@ -31,7 +32,6 @@
 }
 
 section {
-  min-height: calc(100vh - 256px);
   padding: 128px 0px;
 }
 
@@ -47,6 +47,8 @@ a {
   border-radius: 100px;
   border: solid 4px #cbc18d;
   color: #fff;
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
 .mini-message {
@@ -62,6 +64,14 @@ h2 {
   margin-bottom: 32px;
 }
 
+.clearfix::after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
 /* Color */
 
 .bg-darkblue {
@@ -72,10 +82,21 @@ h2 {
 }
 
 .bg-white {
-  background: linear-gradient(0deg, rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url(/img/whitebg.png);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(/img/whitebg.png);
   background-repeat: repeat;
   background-position: 50% 50%;
   background-size: 150px;
+}
+
+.bg-blue {
+  background: linear-gradient(0deg, rgba(0, 0, 30, 0.8), rgba(0, 0, 30, 0.8)), url(/img/bluebg.jpg);
+  background-repeat: repeat;
+  background-position: 50% 50%;
+  /*  background-size: 150px;*/
+}
+
+.bg-simple-blue {
+  background-color: #071B39;
 }
 
 .fg-white {
@@ -84,6 +105,10 @@ h2 {
 
 .btn-blue {
   background-color: #1c1466;
+}
+
+.btn-red {
+  background-color: #a50319;
 }
 
 .fg-navy {
@@ -105,6 +130,10 @@ header .main-visual {
 
 /* Story */
 
+section.story {
+  min-height: calc(100vh - 256px);
+}
+
 section.story p {
   font-size: 32pt;
   font-family: 'Noto Serif JP', serif;
@@ -113,15 +142,11 @@ section.story p {
   line-height: 1.6em;
 }
 
-section.story.world {
-  
-}
-section.story.magic {
-  
-}
-section.story.school {
-  
-}
+section.story.world {}
+
+section.story.magic {}
+
+section.story.school {}
 
 /* Product */
 
@@ -158,4 +183,166 @@ section.features .card:not(:first-child):before {
   margin-top: 128px;
   height: 170px;
   width: 1px;
+}
+
+/* Learn */
+
+section.learn .curriculum {
+  margin-top: 64px;
+}
+
+section.learn .curriculum img {
+  margin-right: 72px;
+  width: 400px;
+}
+
+section.learn .curriculum p {
+  width: 500px;
+  font-size: 22px;
+  line-height: 1.6em;
+}
+
+/* Look */
+section.look .carousel-content {
+  width: 500px;
+}
+
+section.look .carousel-content img {
+  width: 100%;
+}
+
+section.look .carousel-content h3 {
+  margin-top: 16px;
+  font-size: 24pt;
+  font-family: 'Lato', sans-serif;
+}
+
+section.look .carousel-content p {
+  line-height: 1.6em;
+}
+
+.ma {
+  color: #D21F2A;
+}
+
+.game {
+  color: #257641;
+}
+
+.webd {
+  color: #0D3D8F;
+}
+
+/* Voice */
+
+h2.pen:after {
+  content: ””;
+}
+
+.letter {
+  width: 700px;
+  padding: 32px 48px;
+  margin: 64px auto;
+  background-image: url(/img/letter.png);
+  background-position: bottom;
+  background-size: cover;
+}
+
+.letter img {
+  width: 115px;
+  float: left;
+  margin-top: -16px;
+  margin-left: -24px;
+  margin-bottom: 10px;
+  margin-right: 24px;
+}
+
+.letter hr {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.letter h3 {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 18pt;
+  font-weight: 900;
+  padding-top: 5px;
+}
+
+.letter > p {
+  font-size: 12pt;
+  line-height: 1.9em;
+}
+
+.letter-box {
+  margin: 0 auto;
+}
+
+/* Purchase */
+
+.purchase .flex {
+  margin: 48px;
+}
+
+.purchase .product-info {
+  margin-left: 32px;
+  margin-bottom: 8px;
+}
+
+.purchase .product-info .item-name {
+  font-size: 24pt;
+  font-weight: 700;
+}
+
+.purchase .product-info .item-description {
+  font-size: 14pt;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.purchase .product-info .price {
+  font-size: 14pt;
+  font-weight: 700;
+}
+
+.purchase .product-info .price span {
+  font-size: 24pt;
+  font-weight: 700;
+  margin-left: 8px;
+  margin-right: 2px;
+  line-height: 1em;
+}
+
+/* Footer */
+
+footer {
+  text-align: center;
+  color: white;
+  padding: 32px;
+}
+
+footer img {
+  width: 200px;
+}
+
+footer ul.footer-menu > li.item {
+  float: left;
+  font-size: 14px;
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+footer ul {
+  display: block;
+  margin: 0 auto;
+  width: fit-content;
+  list-style: none;
+  font-weight: 300;
+}
+
+footer .copylight {
+  font-weight: 300;
+  font-size: 14px;
+  margin-top: 32px;
+
 }
