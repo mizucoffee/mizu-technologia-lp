@@ -115,26 +115,41 @@ h2 {
   color: #182c59;
 }
 
+.fg-darkyellow {
+  color: #cc9d3f;
+}
+
+.fg-yellow {
+  color: #e3c7a9;
+}
+
 /* Header */
 
 header nav {
   height: 72px;
 }
 
-header .main-visual {
+/* Story */
+
+header {
+  position: relative;
+  height: 100vh;
+}
+
+header div {
+  position: absolute;
+  top: 72px;
+  width: 100%;
+}
+
+header div.story {
   height: calc(100vh - 72px);
-  background-image: url(/img/main-visual.png);
+  padding: 0px;
   background-size: cover;
   background-position: center;
 }
 
-/* Story */
-
-section.story {
-  min-height: calc(100vh - 256px);
-}
-
-section.story p {
+header div.story p {
   font-size: 32pt;
   font-family: 'Noto Serif JP', serif;
   font-weight: 700;
@@ -142,11 +157,40 @@ section.story p {
   line-height: 1.6em;
 }
 
-section.story.world {}
+header div.story.world {
+  background-image: url(/img/w1.png);
+  animation: fade-out 1s ease 2s forwards;
+  z-index: 40;
+}
 
-section.story.magic {}
+header div.story.magic {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/img/w2.png);
+  animation: fade-out 1s ease 6s forwards;
+  z-index: 30;
+}
 
-section.story.school {}
+header div.story.school {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/img/w3.png);
+  animation: fade-out 1s ease 10s forwards;
+  z-index: 20;
+}
+
+header div.story.main-visual {
+  background-image: linear-gradient(15deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)), url(/img/main-visual.png);
+  z-index: 10;
+}
+
+header svg {
+  position: absolute;
+  filter: drop-shadow(0px 0px 3px #B3F8FF);
+  width: 65vw;
+  bottom: 7vh;
+  left: 3vw;
+}
+
+header svg path {
+  fill: #fff;
+}
 
 /* Product */
 
@@ -323,6 +367,7 @@ footer {
 
 footer img {
   width: 200px;
+  margin-bottom: px;
 }
 
 footer ul.footer-menu > li.item {
@@ -343,6 +388,17 @@ footer ul {
 footer .copylight {
   font-weight: 300;
   font-size: 14px;
-  margin-top: 32px;
+  margin-top: 16px;
+  color: #aaa;
+}
 
+/* @keyframes */
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
