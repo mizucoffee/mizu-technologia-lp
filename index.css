@@ -10,6 +10,7 @@
 
 .flex {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .block {
@@ -112,8 +113,6 @@ h2 {
 }
 
 .btn-blue {
-/*  background-color: #1c1466;*/
-  
   border-style: solid;
   border-width: 16px 75px 16px 75px;
   border-image: url(/img/btn-blue.png) 16 75 16 75 stretch stretch;
@@ -162,6 +161,41 @@ header div {
   position: absolute;
   top: 72px;
   width: 100%;
+}
+
+header .progress {
+  position: absolute;
+  top: calc(100vh - 4px);
+  width: 0vw;
+  height: 4px;
+  background: #be9138;
+  opacity: 0;
+  z-index: 100;
+}
+
+/*
+header .progress.p1 {
+  animation: progress 2.5s ease 0s forwards, fade-out 0.5s ease 2.5s forwards;
+}
+
+header .progress.p2 {
+  animation: progress 4s ease 2.5s forwards, fade-out 0.5s ease 6.5s forwards;
+}
+
+header .progress.p3 {
+  animation: progress 4s ease 6.5s forwards, fade-out 0.5s ease 10.5s forwards;
+}
+*/
+
+@keyframes progress {
+  from {
+    opacity: 1;
+    width: 0vw;
+  }
+  to {
+    opacity: 1;
+    width: 100vw;
+  }
 }
 
 header div.story {
@@ -224,7 +258,7 @@ section.product p {
 
 section.product img {
   width: 50vw;
-  height: 50vh;
+  max-height: 50vh;
   margin: 70px 0px;
   object-fit: contain;
 }
@@ -241,29 +275,35 @@ section.features .card > p {
   font-weight: 700;
 }
 
+/*
 section.features .card:not(:first-child):before {
   content: "";
   background: #aaa;
-  display: block;
+  displaxy: block;
   position: absolute;
   margin-top: 128px;
   height: 170px;
   width: 1px;
 }
+*/
 
 /* Learn */
 
 section.learn .curriculum {
-  margin-top: 64px;
+  margin-top: 32px;
 }
 
 section.learn .curriculum img {
-  margin-right: 72px;
+  margin: 16px 32px;
   width: 400px;
 }
 
-section.learn .curriculum p {
+section.learn .curriculum div {
   width: 500px;
+  margin: 16px 32px;
+}
+
+section.learn .curriculum p {
   font-size: 22px;
   line-height: 1.6em;
 }
@@ -287,6 +327,50 @@ section.look .carousel-content p {
   line-height: 1.6em;
 }
 
+/*
+.block {
+  overflow: hidden;
+  margin: 100px auto 0;
+}
+*/
+
+section.look .slick-slider .slick-slide {
+  transform: scale(0.8);
+  opacity: 0.3;
+  transition: 0.5s;
+  width: 40vw;
+}
+
+section.look .slick-slider .slick-center {
+  transform: scale(1);
+  opacity: 1;
+  width: 70vw;
+}
+
+section.look .slick-arrow {
+  position: absolute;
+  top: calc(50% - 32px);
+  z-index: 10;
+  width: 64px;
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: white;
+  border-radius: 50%;
+}
+
+section.look .slick-disabled {
+  opacity: 0.1;
+  cursor: default;
+}
+
+section.look .slick-prev {
+  left: 10%;
+}
+
+section.look .slick-next {
+  right: 10%;
+}
+
 .ma {
   color: #D21F2A;
 }
@@ -301,12 +385,20 @@ section.look .carousel-content p {
 
 /* Voice */
 
-h2.pen:after {
-  content: ””;
+h2.pen {
+  background: url(/img/line.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  width: 350px;
+  margin: 0 auto;
+  padding-top: 16px;
 }
 
 .letter {
-  width: 700px;
+/*  width: calc*100%;*/
+  max-width: 700px;
   padding: 32px 48px;
   margin: 64px auto;
   background-image: url(/img/letter.webp);
@@ -341,13 +433,17 @@ h2.pen:after {
 }
 
 .letter-box {
-  margin: 0 auto;
+  padding: 0 32px;
 }
 
 /* Purchase */
 
 .purchase .flex {
   margin: 48px;
+}
+
+.purchase .flex > * {
+  margin: 24px 0;
 }
 
 .purchase .product-info {

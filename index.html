@@ -18,27 +18,12 @@
     $(document).ready(function() {
       $('.carousel').slick({
         centerMode: true,
-        centerPadding: '400px',
         slidesToShow: 1,
-        responsive: [{
-            breakpoint: 768,
-            settings: {
-              arrows: false,
-              centerMode: true,
-              centerPadding: '40px',
-              slidesToShow: 3
-            }
-          },
-          {
-            breakpoint: 480,
-            settings: {
-              arrows: false,
-              centerMode: true,
-              centerPadding: '40px',
-              slidesToShow: 1
-            }
-          }
-        ]
+        infinite: false,
+        centerPadding: '20%',
+        initialSlide: 1,
+        prevArrow: '<img class="slick-prev" src="/img/arrow-left.svg"/>',
+        nextArrow: '<img class="slick-next" src="/img/arrow-right.svg"/>',
       });
     });
   </script>
@@ -47,6 +32,9 @@
 <body>
   <header>
     <nav class="flex center bg-darkblue"><img src="/img/logo.webp" alt="テクノロジア魔法学校"></nav>
+    <div class="progress p1"></div>
+    <div class="progress p2"></div>
+    <div class="progress p3"></div>
     <div class="story world flex center tac">
       <p class="fg-white">その世界は、<br>
         テクノロジアと呼ばれていました。</p>
@@ -351,7 +339,7 @@
   <section class="features bg-white fg-darkyellow">
     <p class="mini-message fg-darkyellow">＼ここが嬉しい／</p>
     <h2>テクノロジア魔法学校の３つの特徴</h2>
-    <div class="card-box flex bcenter">
+    <div class="card-box flex center bcenter">
       <div class="card">
         <img src="/img/chara.webp" alt="">
         <p class="fg-navy tac">ディズニーのキャラクターたちが<br>あなたの開発をサポート！</p>
