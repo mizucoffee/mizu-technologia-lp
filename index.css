@@ -40,15 +40,23 @@ a {
 }
 
 .btn {
-  width: 300px;
+  width: 220px;
   font-weight: 700;
   font-size: 16pt;
-  padding: 10px;
   border-radius: 100px;
   border: solid 4px #cbc18d;
   color: #fff;
   margin-top: 16px;
   margin-bottom: 16px;
+  transition: transform 0.2s;
+}
+
+.btn:hover {
+  transform: scale(1.02);
+}
+
+.btn > div {
+  padding: 10px;
 }
 
 .mini-message {
@@ -104,11 +112,25 @@ h2 {
 }
 
 .btn-blue {
+/*  background-color: #1c1466;*/
+  
+  border-style: solid;
+  border-width: 16px 75px 16px 75px;
+  border-image: url(/img/btn-blue.png) 16 75 16 75 stretch stretch;
+}
+
+.btn-blue > div {
   background-color: #1c1466;
 }
 
 .btn-red {
-  background-color: #a50319;
+  border-style: solid;
+  border-width: 16px 75px 16px 75px;
+  border-image: url(/img/btn-red.png) 16 75 16 75 stretch stretch;
+}
+
+.btn-red > div {
+  background-color: #A8262F;
 }
 
 .fg-navy {
@@ -116,11 +138,11 @@ h2 {
 }
 
 .fg-darkyellow {
-  color: #cc9d3f;
+  color: #be9138;
 }
 
 .fg-yellow {
-  color: #e3c7a9;
+  color: #f0dbc3;
 }
 
 /* Header */
