@@ -75,21 +75,21 @@ h2 {
 /* Color */
 
 .bg-darkblue {
-  background-image: url(/img/darkbluebg.jpg);
+  background-image: url(/img/darkbluebg.webp);
   background-repeat: repeat;
   background-position: 50% 50%;
   background-size: 150px;
 }
 
 .bg-white {
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(/img/whitebg.png);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(/img/whitebg.webp);
   background-repeat: repeat;
   background-position: 50% 50%;
   background-size: 150px;
 }
 
 .bg-blue {
-  background: linear-gradient(0deg, rgba(0, 0, 30, 0.8), rgba(0, 0, 30, 0.8)), url(/img/bluebg.jpg);
+  background: linear-gradient(0deg, rgba(0, 0, 30, 0.8), rgba(0, 0, 30, 0.8)), url(/img/bluebg.webp);
   background-repeat: repeat;
   background-position: 50% 50%;
   /*  background-size: 150px;*/
@@ -158,25 +158,25 @@ header div.story p {
 }
 
 header div.story.world {
-  background-image: url(/img/w1.png);
+  background-image: url(/img/w1.webp);
   animation: fade-out 1s ease 2s forwards;
   z-index: 40;
 }
 
 header div.story.magic {
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/img/w2.png);
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/img/w2.webp);
   animation: fade-out 1s ease 6s forwards;
   z-index: 30;
 }
 
 header div.story.school {
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/img/w3.png);
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/img/w3.webp);
   animation: fade-out 1s ease 10s forwards;
   z-index: 20;
 }
 
 header div.story.main-visual {
-  background-image: linear-gradient(15deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)), url(/img/main-visual.png);
+  background-image: linear-gradient(15deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)), url(/img/main-visual.webp);
   z-index: 10;
 }
 
@@ -287,7 +287,7 @@ h2.pen:after {
   width: 700px;
   padding: 32px 48px;
   margin: 64px auto;
-  background-image: url(/img/letter.png);
+  background-image: url(/img/letter.webp);
   background-position: bottom;
   background-size: cover;
 }
